@@ -31,7 +31,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  *
  * @author Yusuke Yamamoto - yusuke at mac.com
  */
-final class ParseUtil {
+final public class ParseUtil {
     private ParseUtil() {
         // should never be instantiated
         throw new AssertionError();

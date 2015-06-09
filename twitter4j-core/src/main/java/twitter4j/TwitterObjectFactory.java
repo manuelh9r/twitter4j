@@ -326,7 +326,7 @@ public final class TwitterObjectFactory {
      *
      * @since Twitter4J 2.1.7
      */
-    static void clearThreadLocalMap() {
+    public static void clearThreadLocalMap() {
         rawJsonMap.get().clear();
     }
 
@@ -337,7 +337,7 @@ public final class TwitterObjectFactory {
      *
      * @since Twitter4J 2.1.7
      */
-    static <T> T registerJSONObject(T key, Object json) {
+    public static <T> T registerJSONObject(T key, Object json) {
         registeredAtleastOnce = true;
         rawJsonMap.get().put(key, json);
         return key;

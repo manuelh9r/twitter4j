@@ -14,8 +14,10 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
 
+import junit.framework.Assert;
+import twitter4j.*;
 import twitter4j.auth.AccessToken;
 
 import java.io.InputStream;
@@ -129,20 +131,20 @@ public class StreamAPITest extends TwitterTestBase implements StatusListener, Co
         StatusStream stream = new StatusStreamImpl(new DispatcherFactory().getInstance(), is, conf1);
         stream.next(this);
         waitForNotification();
-        assertEquals(6832057002l, deletionNotice.getStatusId());
-        assertEquals(18378841, deletionNotice.getUserId());
+        Assert.assertEquals(6832057002l, deletionNotice.getStatusId());
+        Assert.assertEquals(18378841, deletionNotice.getUserId());
         stream.next(this);
         waitForNotification();
-        assertEquals("aaa minha irma ta enchendo aki querendo entra --'", status.getText());
+        Assert.assertEquals("aaa minha irma ta enchendo aki querendo entra --'", status.getText());
         stream.next(this);
         waitForNotification();
-        assertEquals("Acho retartado ter que esperar para usar o script de novo, por isso só uso o Twitter Followers, o site da empresa é: http://bit.ly/5tNlDp", status.getText());
+        Assert.assertEquals("Acho retartado ter que esperar para usar o script de novo, por isso só uso o Twitter Followers, o site da empresa é: http://bit.ly/5tNlDp", status.getText());
         stream.next(this);
         waitForNotification();
         assertEquals(121564, trackLimit);
         stream.next(this);
         waitForNotification();
-        assertEquals("ngantuk banget nguap mulu", status.getText());
+        Assert.assertEquals("ngantuk banget nguap mulu", status.getText());
         stream.next(this);
         waitForNotification();
         assertEquals(14090452, userId);

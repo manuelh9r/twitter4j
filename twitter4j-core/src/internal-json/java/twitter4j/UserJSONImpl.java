@@ -25,7 +25,7 @@ import java.util.Date;
  *
  * @author Yusuke Yamamoto - yusuke at mac.com
  */
-/*package*/ final class UserJSONImpl extends TwitterResponseImpl implements User, java.io.Serializable {
+public final class UserJSONImpl extends TwitterResponseImpl implements User, java.io.Serializable {
 
     private static final long serialVersionUID = -5448266606847617015L;
     private long id;
@@ -70,7 +70,7 @@ import java.util.Date;
     private int listedCount;
     private boolean isFollowRequestSent;
 
-    /*package*/UserJSONImpl(HttpResponse res, Configuration conf) throws TwitterException {
+    public UserJSONImpl(HttpResponse res, Configuration conf) throws TwitterException {
         super(res);
         if (conf.isJSONStoreEnabled()) {
             TwitterObjectFactory.clearThreadLocalMap();
@@ -82,7 +82,7 @@ import java.util.Date;
         }
     }
 
-    /*package*/UserJSONImpl(JSONObject json) throws TwitterException {
+    public UserJSONImpl(JSONObject json) throws TwitterException {
         super();
         init(json);
     }

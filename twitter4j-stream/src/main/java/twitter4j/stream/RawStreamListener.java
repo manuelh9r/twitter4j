@@ -13,35 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-package twitter4j;
+package twitter4j.stream;
 
 /**
- * @author yusuke at mac.com
- * @since Twitter4J 2.1.3
+ * @author Yusuke Yamamoto - yusuke at mac.com
+ * @since Twitter4J 3.0.2
  */
-public class StatusAdapter implements StatusListener {
-    @Override
-    public void onStatus(Status status) {
-    }
-
-    @Override
-    public void onDeletionNotice(StatusDeletionNotice statusDeletionNotice) {
-    }
-
-    @Override
-    public void onTrackLimitationNotice(int numberOfLimitedStatuses) {
-    }
-
-    @Override
-    public void onScrubGeo(long userId, long upToStatusId) {
-    }
-
-    @Override
-    public void onException(Exception ex) {
-    }
-
-    @Override
-    public void onStallWarning(StallWarning warning) {
-    }
+public interface RawStreamListener extends StreamListener {
+    void onMessage(String rawString);
 }

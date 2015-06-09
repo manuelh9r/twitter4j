@@ -21,6 +21,8 @@ import twitter4j.auth.OAuthAuthorization;
 import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
 import twitter4j.conf.ConfigurationContext;
+import twitter4j.stream.TwitterTestBase;
+
 
 import java.io.*;
 import java.util.*;

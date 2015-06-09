@@ -22,13 +22,13 @@ package twitter4j;
  * @author Yusuke Yamamoto - yusuke at mac.com
  * @since Twitter4J 2.1.2
  */
-class StatusDeletionNoticeImpl implements StatusDeletionNotice, java.io.Serializable {
+public class StatusDeletionNoticeImpl implements StatusDeletionNotice, java.io.Serializable {
 
     private static final long serialVersionUID = 9144204870473786368L;
     private final long statusId;
     private final long userId;
 
-    /*package*/ StatusDeletionNoticeImpl(JSONObject status) {
+    public StatusDeletionNoticeImpl(JSONObject status) {
         this.statusId = ParseUtil.getLong("id", status);
         this.userId = ParseUtil.getLong("user_id", status);
     }

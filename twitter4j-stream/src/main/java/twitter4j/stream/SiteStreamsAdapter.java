@@ -1,5 +1,7 @@
-package twitter4j;
+package twitter4j.stream;
 
+
+import twitter4j.*;
 
 /**
  * @author Yusuke Yamamoto - yusuke at mac.com

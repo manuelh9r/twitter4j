@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
 
+import twitter4j.*;
 import twitter4j.conf.Configuration;
 
 import java.io.IOException;
@@ -29,12 +30,12 @@ final class SiteStreamsImpl extends StatusStreamBase {
 
     private final StreamController cs;
 
-    /*package*/ SiteStreamsImpl(Dispatcher dispatcher, InputStream stream, Configuration conf, StreamController cs) throws IOException {
+    public SiteStreamsImpl(Dispatcher dispatcher, InputStream stream, Configuration conf, StreamController cs) throws IOException {
         super(dispatcher, stream, conf);
         this.cs = cs;
     }
 
-    /*package*/ SiteStreamsImpl(Dispatcher dispatcher, HttpResponse response, Configuration conf, StreamController cs) throws IOException {
+    public SiteStreamsImpl(Dispatcher dispatcher, HttpResponse response, Configuration conf, StreamController cs) throws IOException {
         super(dispatcher, response, conf);
         this.cs = cs;
     }

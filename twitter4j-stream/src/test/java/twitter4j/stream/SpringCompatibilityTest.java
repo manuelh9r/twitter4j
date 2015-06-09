@@ -14,12 +14,18 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
 
 import junit.framework.TestCase;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+import twitter4j.AsyncTwitter;
+import twitter4j.AsyncTwitterFactory;
+import twitter4j.Twitter;
+import twitter4j.TwitterFactory;
+import twitter4j.stream.TwitterStream;
+import twitter4j.stream.TwitterStreamFactory;
 
 import java.io.BufferedWriter;
 import java.io.File;

@@ -14,9 +14,15 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
 
+import twitter4j.DirectMessage;
+import twitter4j.JSONException;
+import twitter4j.JSONObject;
+import twitter4j.TwitterException;
 import twitter4j.conf.Configuration;
+
+import twitter4j.*;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,12 +31,13 @@ import java.io.InputStream;
  * @author Yusuke Yamamoto - yusuke at mac.com
  * @since Twitter4J 2.1.8
  */
-final class UserStreamImpl extends StatusStreamImpl implements UserStream {
-    /*package*/ UserStreamImpl(Dispatcher dispatcher, InputStream stream, Configuration conf) throws IOException {
+final public class UserStreamImpl extends StatusStreamImpl implements UserStream {
+    public UserStreamImpl(Dispatcher dispatcher, InputStream stream, Configuration conf) throws IOException {
+
         super(dispatcher, stream, conf);
     }
 
-    /*package*/ UserStreamImpl(Dispatcher dispatcher, HttpResponse response, Configuration conf) throws IOException {
+    public UserStreamImpl(Dispatcher dispatcher, HttpResponse response, Configuration conf) throws IOException {
         super(dispatcher, response, conf);
     }
 

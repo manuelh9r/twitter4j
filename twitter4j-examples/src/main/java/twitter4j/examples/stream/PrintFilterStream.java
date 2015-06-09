@@ -17,6 +17,7 @@
 package twitter4j.examples.stream;
 
 import twitter4j.*;
+import twitter4j.stream.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,6 @@
-package twitter4j;
+package twitter4j.stream;
+
+import twitter4j.TwitterException;
 
 /**
  * @author Yusuke Yamamoto - yusuke at mac.com

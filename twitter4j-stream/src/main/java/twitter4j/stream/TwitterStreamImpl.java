@@ -13,8 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package twitter4j;
+package twitter4j.stream;
 
+import twitter4j.*;
 import twitter4j.auth.Authorization;
 import twitter4j.conf.Configuration;
 

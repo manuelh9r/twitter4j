@@ -14,29 +14,26 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
+
+import twitter4j.TwitterException;
+
+import java.io.IOException;
 
 /**
  * @author Yusuke Yamamoto - yusuke at mac.com
+ * @since Twitter4J 2.0.4
  */
-public final class VersionStream {
-    private static final String VERSION = "4.0.2";
-    private static final String TITLE = "Twitter4J Streaming API support";
-
-    private VersionStream() {
-        throw new AssertionError();
-    }
-
-    public static String getVersion() {
-        return VERSION;
-    }
+interface StatusStream {
 
     /**
-     * prints the version string
+     * Reads next status from this stream.
      *
-     * @param args will be just ignored.
+     * @param listener a StatusListener implementation
+     * @throws twitter4j.TwitterException      when the end of the stream has been reached.
+     * @throws IllegalStateException when the end of the stream had been reached.
      */
-    public static void main(String[] args) {
-        System.out.println(TITLE + " " + VERSION);
-    }
+    void next(StatusListener listener) throws TwitterException;
+
+    void close() throws IOException;
 }

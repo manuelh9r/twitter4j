@@ -25,7 +25,7 @@ import java.util.Map;
  * @author Yusuke Yamamoto - yusuke at mac.com
  * @since Twitter4J 2.2.4
  */
-class JSONImplFactory implements ObjectFactory {
+public class JSONImplFactory implements ObjectFactory {
     private static final long serialVersionUID = -1853541456182663343L;
     private final Configuration conf;
 

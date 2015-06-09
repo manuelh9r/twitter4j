@@ -28,7 +28,7 @@ import static twitter4j.ParseUtil.getDate;
  *
  * @author Yusuke Yamamoto - yusuke at mac.com
  */
-/*package*/ final class StatusJSONImpl extends TwitterResponseImpl implements Status, java.io.Serializable {
+public final class StatusJSONImpl extends TwitterResponseImpl implements Status, java.io.Serializable {
     private static final Logger logger = Logger.getLogger(StatusJSONImpl.class);
     private static final long serialVersionUID = -6461195536943679985L;
 
@@ -63,7 +63,7 @@ import static twitter4j.ParseUtil.getDate;
     private Scopes scopes;
     private User user = null;
 
-    /*package*/StatusJSONImpl(HttpResponse res, Configuration conf) throws TwitterException {
+    public StatusJSONImpl(HttpResponse res, Configuration conf) throws TwitterException {
         super(res);
         JSONObject json = res.asJSONObject();
         init(json);
@@ -73,7 +73,7 @@ import static twitter4j.ParseUtil.getDate;
         }
     }
 
-    /*package*/StatusJSONImpl(JSONObject json, Configuration conf) throws TwitterException {
+    public StatusJSONImpl(JSONObject json, Configuration conf) throws TwitterException {
         super();
         init(json);
         if (conf.isJSONStoreEnabled()) {
@@ -81,7 +81,7 @@ import static twitter4j.ParseUtil.getDate;
         }
     }
 
-    /*package*/ StatusJSONImpl(JSONObject json) throws TwitterException {
+    public StatusJSONImpl(JSONObject json) throws TwitterException {
         super();
         init(json);
     }

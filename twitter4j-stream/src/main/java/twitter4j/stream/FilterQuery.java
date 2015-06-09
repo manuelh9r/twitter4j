@@ -14,7 +14,10 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
+
+import twitter4j.HttpParameter;
+import twitter4j.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;

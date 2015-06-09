@@ -14,9 +14,11 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
 
 import junit.framework.TestCase;
+import twitter4j.Twitter;
+import twitter4j.TwitterFactory;
 import twitter4j.conf.Configuration;
 import twitter4j.conf.PropertyConfiguration;
 

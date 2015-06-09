@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
 
+import twitter4j.*;
 import twitter4j.conf.Configuration;
 
 import java.io.BufferedReader;

@@ -27,8 +27,7 @@ import java.util.Date;
  *
  * @author Dan Checkoway - dcheckoway at gmail.com
  */
-/*package*/ class UserListJSONImpl extends TwitterResponseImpl implements UserList, java.io.Serializable {
-
+public class UserListJSONImpl extends TwitterResponseImpl implements UserList, java.io.Serializable {
     private static final long serialVersionUID = 449418980060197008L;
     private long id;
     private String name;
@@ -43,7 +42,7 @@ import java.util.Date;
     private boolean following;
     private Date createdAt;
 
-    /*package*/ UserListJSONImpl(HttpResponse res, Configuration conf) throws TwitterException {
+    public UserListJSONImpl(HttpResponse res, Configuration conf) throws TwitterException {
         super(res);
         if (conf.isJSONStoreEnabled()) {
             TwitterObjectFactory.clearThreadLocalMap();
@@ -55,7 +54,7 @@ import java.util.Date;
         }
     }
 
-    /*package*/ UserListJSONImpl(JSONObject json) throws TwitterException {
+    public UserListJSONImpl(JSONObject json) throws TwitterException {
         super();
         init(json);
     }

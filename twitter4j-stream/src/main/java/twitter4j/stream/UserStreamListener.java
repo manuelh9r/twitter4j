@@ -14,7 +14,12 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
+
+import twitter4j.DirectMessage;
+import twitter4j.Status;
+import twitter4j.User;
+import twitter4j.UserList;
 
 /**
  * @author yusuke at mac.com

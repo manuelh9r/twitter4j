@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
+
+import twitter4j.TwitterException;
 
 import java.io.IOException;
 
@@ -27,7 +29,7 @@ interface UserStream extends StatusStream {
      * Reads next element from this stream.
      *
      * @param listener a UserStreamListener implementation
-     * @throws TwitterException      when the end of the stream has been reached.
+     * @throws twitter4j.TwitterException      when the end of the stream has been reached.
      * @throws IllegalStateException when the end of the stream had been reached.
      */
     void next(UserStreamListener listener) throws TwitterException;

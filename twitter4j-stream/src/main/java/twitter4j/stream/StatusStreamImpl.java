@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
 
+import twitter4j.*;
 import twitter4j.conf.Configuration;
 
 import java.io.IOException;
@@ -27,15 +28,15 @@ import java.io.InputStream;
  * @author Yusuke Yamamoto - yusuke at mac.com
  * @since Twitter4J 2.1.2
  */
-class StatusStreamImpl extends StatusStreamBase {
+public class StatusStreamImpl extends StatusStreamBase {
     /*package*/
 
-    StatusStreamImpl(Dispatcher dispatcher, InputStream stream, Configuration conf) throws IOException {
+    public StatusStreamImpl(Dispatcher dispatcher, InputStream stream, Configuration conf) throws IOException {
         super(dispatcher, stream, conf);
     }
     /*package*/
 
-    StatusStreamImpl(Dispatcher dispatcher, HttpResponse response, Configuration conf) throws IOException {
+    public StatusStreamImpl(Dispatcher dispatcher, HttpResponse response, Configuration conf) throws IOException {
         super(dispatcher, response, conf);
     }
 

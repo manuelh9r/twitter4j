@@ -15,7 +15,12 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
+
+import twitter4j.JSONArray;
+import twitter4j.JSONException;
+import twitter4j.JSONObject;
+import twitter4j.TwitterException;
 
 import java.io.Serializable;
 import java.util.Arrays;

@@ -14,15 +14,17 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
 
 import junit.framework.Assert;
+import twitter4j.DispatcherFactory;
 
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import twitter4j.*;
 
 import static twitter4j.TwitterMethod.*;
 

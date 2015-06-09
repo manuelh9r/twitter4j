@@ -17,6 +17,10 @@
 package twitter4j.examples.stream;
 
 import twitter4j.*;
+import twitter4j.stream.StallWarning;
+import twitter4j.stream.StatusListener;
+import twitter4j.stream.TwitterStream;
+import twitter4j.stream.TwitterStreamFactory;
 
 /**
  * @author Yusuke Yamamoto - yusuke at mac.com

@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-package twitter4j;
+package twitter4j.stream;
 
+import twitter4j.TwitterFactory;
 import twitter4j.auth.AccessToken;
 import twitter4j.auth.Authorization;
 import twitter4j.auth.AuthorizationFactory;

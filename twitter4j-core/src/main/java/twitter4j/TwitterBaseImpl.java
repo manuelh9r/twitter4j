@@ -31,22 +31,22 @@ import static twitter4j.HttpResponseCode.*;
  *
  * @author Yusuke Yamamoto - yusuke at mac.com
  */
-abstract class TwitterBaseImpl implements TwitterBase, java.io.Serializable, OAuthSupport, OAuth2Support, HttpResponseListener {
+public abstract class TwitterBaseImpl implements TwitterBase, java.io.Serializable, OAuthSupport, OAuth2Support, HttpResponseListener {
     private static final String WWW_DETAILS = "See http://twitter4j.org/en/configuration.html for details";
     private static final long serialVersionUID = -7824361938865528554L;
 
-    Configuration conf;
-    private transient String screenName = null;
-    private transient long id = 0;
+    protected Configuration conf;
+    protected transient String screenName = null;
+    protected transient long id = 0;
 
     transient HttpClient http;
     private List<RateLimitStatusListener> rateLimitStatusListeners = new ArrayList<RateLimitStatusListener>(0);
 
-    ObjectFactory factory;
+    public ObjectFactory factory;
 
-    Authorization auth;
+    public Authorization auth;
 
-    /*package*/ TwitterBaseImpl(Configuration conf, Authorization auth) {
+    public TwitterBaseImpl(Configuration conf, Authorization auth) {
         this.conf = conf;
         this.auth = auth;
         init();
@@ -181,14 +181,14 @@ abstract class TwitterBaseImpl implements TwitterBase, java.io.Serializable, OAu
         return this.conf;
     }
 
-    final void ensureAuthorizationEnabled() {
+    final public void ensureAuthorizationEnabled() {
         if (!auth.isEnabled()) {
             throw new IllegalStateException(
                     "Authentication credentials are missing. " + WWW_DETAILS);
         }
     }
 
-    final void ensureOAuthEnabled() {
+    final public void ensureOAuthEnabled() {
         if (!(auth instanceof OAuthAuthorization)) {
             throw new IllegalStateException(
                     "OAuth required. Authentication credentials are missing. " + WWW_DETAILS);
